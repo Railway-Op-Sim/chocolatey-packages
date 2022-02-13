@@ -10,6 +10,8 @@ jobs:
       - name: Test Install
         run: choco install railwayopsim -dv -s . -y
       - name: Test Upgrade
-        run: .\update.ps1
+        run: |
+          choco install au
+          .\update.ps1
       - name: Test Uninstall
         run: choco uninstall railwayopsim
