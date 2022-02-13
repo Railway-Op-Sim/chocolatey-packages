@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create Package
-        run: choco package
+        run: choco pack
       - name: Test Install
         run: choco install railwayopsim -dv -s . -y
       - name: Test Upgrade
