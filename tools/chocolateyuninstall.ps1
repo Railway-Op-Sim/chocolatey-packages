@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
-$packageName  = "railwayopsim"
-$installPath = "$env:ProgramFiles\RailwayOperationSimulator"
+$installPath = "$env:ProgramFiles\Railway_Operation_Simulator"
 
 $packageArgs = @{
-  packageName = $packageName
-  zipFileName = "Release.v2.11.1.zip"
+  packageName = $env:ChocolateyPackageName
+  zipFileName = "Release.$env:ChocolateyPackageVersion.zip"
 }
 
 Uninstall-ChocolateyZipPackage @packageArgs
-Remove-Item $installPath
+Remove-Item -Recurse $installPath
+Remove-Item "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Railway Operation Simulator.lnk"
 
 #Remove from Path
 $Environment = [System.Environment]::GetEnvironmentVariable("Path", "User")

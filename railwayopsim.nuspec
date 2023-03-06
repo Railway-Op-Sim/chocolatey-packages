@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>2.11.1</version>
+    <version>2.14.0</version>
     <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <!--<owners>Kristian Zarebski</owners>-->
@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <authors>Albert Ball</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://railwayoperationsimulator.com/_</projectUrl>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/c/c7/Railway_Operation_Simulator_Logo.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/Railway-Op-Sim/Project-Catalogue/03ee9997ce2a5f8d93be82326e7719d45e0fcc97/media/RailOSLogoStandard.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/AlbertBall/railway-dot-exe/blob/master/LICENSE</licenseUrl>
@@ -49,7 +49,17 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <bugTrackerUrl>https://github.com/AlbertBall/railway-dot-exe/issues</bugTrackerUrl>
     <tags>railwayopsim</tags>
     <summary>Desktop signalling centre simulation</summary>
-    <description>Become a desktop signaller with Railway Operation Simulator, it’s free! Create your own railways or download one of the many shared projects on the project website.</description>
+    <description>
+    Railway Operation Simulator is an open source desktop railway signalling simulation program.
+
+    # Features
+
+    * Build and operate custom railways.
+    * Create custom timetables for existing or custom railways.
+    * Large catalogue of community created simulations on the [main website](https://www.railwayoperationsimulator.com).
+    * Logging of performance score.
+    * Simulated random faults and delays.
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
   </metadata>
   <files>
