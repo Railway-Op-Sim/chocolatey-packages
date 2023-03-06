@@ -36,8 +36,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about the software itself -->
     <title>Railway Operation Simulator</title>
     <authors>Albert Ball</authors>
+    <owners>Railway-Op-Sim</owners>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://railwayoperationsimulator.com/_</projectUrl>
+    <projectUrl>https://railwayoperationsimulator.com/</projectUrl>
+    <packageSourceUrl>https://github.com/Railway-Op-Sim/chocolatey-packages</packageSourceUrl>
     <iconUrl>https://rawcdn.githack.com/Railway-Op-Sim/Project-Catalogue/03ee9997ce2a5f8d93be82326e7719d45e0fcc97/media/RailOSLogoStandard.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is required for the community feed -->
@@ -47,20 +49,23 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/AlbertBall/railway-dot-exe/issues</bugTrackerUrl>
-    <tags>railwayopsim</tags>
+    <tags>railwayopsim railway signalling</tags>
+    <copyright>Copyright (C) 2010 Albert Ball</copyright>
     <summary>Desktop signalling centre simulation</summary>
-    <description>
-    Railway Operation Simulator is an open source desktop railway signalling simulation program.
+    <releaseNotes>
+    https://www.railwayoperationsimulator.com/2023/new-program-version-released-v2-14-0
+    </releaseNotes>
+    <description><![CDATA[Railway Operation Simulator is an open source desktop railway signalling simulation program.
 
-    # Features
+## Features
 
-    * Build and operate custom railways.
-    * Create custom timetables for existing or custom railways.
-    * Large catalogue of community created simulations on the [main website](https://www.railwayoperationsimulator.com).
-    * Logging of performance score.
-    * Simulated random faults and delays.
-    </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+- Build and operate custom railways.
+- Create custom timetables for existing or custom railways.
+- Large catalogue of community created simulations on the [main website](https://www.railwayoperationsimulator.com).
+- Logging of performance score.
+- Simulated random faults and delays.]]>
+</description>
+  <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
