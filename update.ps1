@@ -10,7 +10,7 @@ function global:au_BeforeUpdate() {
 function global:au_GetLatest {
     $latest_release_req = Invoke-RestMethod -Uri $latest_release_uri
     $latest_release = $latest_release_req.tag_name
-    $version = ($latest_release -split 'v' | select -Last 1)
+    $version = ($latest_release -split 'v' | Select-Object -Last 1)
     $download_link = "$download_link_prefix/$latest_release/Release.$latest_release.zip"
     @{ Version = $version; URL32 = $download_link}
 }
