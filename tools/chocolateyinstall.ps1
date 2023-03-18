@@ -24,8 +24,16 @@ $packageArgs = @{
 }
 
 $binaryDirectory = "$toolsDir\Railway"
+$exe_path_32 = "$binaryDirectory\RailOS32.exe"
+$exe_path_64 = "$binaryDirectory\RailOS64.exe"
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyPath -PathToInstall $binaryDirectory -PathType "User"
 Get-WebFile -Url "https://raw.githubusercontent.com/AlbertBall/railway-dot-exe/master/railway_Icon.ico" -FileName $binaryDirectory\railway.ico
-Install-ChocolateyShortcut -ShortcutFilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Railway Operation Simulator.lnk" -TargetPath "$binaryDirectory\railway.exe" -IconLocation $binaryDirectory\railway.ico
+if([System.IO.File]::Exists($exe_path_32)) {
+  $rail_os_exe = $exe_path_32
+}
+else {
+  $rail_os_exe = $exe_path_64
+}
+Install-ChocolateyShortcut -ShortcutFilePath "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Railway Operation Simulator.lnk" -TargetPath "$rail_os_exe" -IconLocation $binaryDirectory\railway.ico
 Update-SessionEnvironment
