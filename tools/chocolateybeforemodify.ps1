@@ -6,4 +6,5 @@
 #  uninstall script so that it doesn't fail when it is already uninstalled.
 # NOTE: For upgrades - like the uninstall script, this script always runs from
 #  the currently installed version, not from the new upgraded package version.
-Stop-Process -ProcessName railway.exe -ErrorAction SilentlyContinue
+Stop-Process -ProcessName RailOS64.exe -ErrorAction SilentlyContinue
+Stop-Process -ProcessName RailOS32.exe -ErrorAction SilentlyContinue
