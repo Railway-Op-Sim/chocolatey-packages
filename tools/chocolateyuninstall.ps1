@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$installPath = "$env:ProgramFiles\Railway_Operation_Simulator"
+$installPath = "$env:ProgramFiles\Railway_Operation_Simulator\Release v$env:ChocolateyPackageVersion"
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
