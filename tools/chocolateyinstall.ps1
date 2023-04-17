@@ -2,6 +2,7 @@
 $ErrorActionPreference = 'Stop';
 $checksum_64 = "E97FD3EA92E360C50858C62F5DF57A9FA17380F3ED895EA6293303085F17E2E0"
 $checksum_32 = "CBFD0FC80314A3EDEE0127495FB1CD53025E36E472B01309F4066BAC7CCF535B"
+$checksum_icon = "51CC10FCC171AD1F6B9798A8B8C359EA6D37C2A6DF904004155BB65AB8979C45"
 $repository = "AlbertBall/railway-dot-exe"
 
 Write-Host "Fetching version '$env:ChocolateyPackageVersion'"
@@ -29,6 +30,7 @@ $exe_path_64 = "$binaryDirectory\RailOS64.exe"
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyPath -PathToInstall $binaryDirectory -PathType "User"
 Get-WebFile -Url "https://raw.githubusercontent.com/AlbertBall/railway-dot-exe/master/railway_Icon.ico" -FileName $binaryDirectory\railway.ico
+Get-ChecksumValid -File $binaryDirectory\railway.ico -Checksum $checksum_icon -ChecksumType 'sha256'
 if([System.IO.File]::Exists($exe_path_32)) {
   $rail_os_exe = $exe_path_32
 }
