@@ -1,14 +1,14 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$checksum_64 = "45655D45F6A0219C6BB33CD053D9207A7616B4596ABBD8A5F192AF307F2AEC44"
-$checksum_32 = "81105E7E4D0085A873F6F65FB1B839F7C1166CEE82ADE12E9E33E382676A41E8"
+$checksum_64 = "292f79c3285bb442c76f5a6579b04cd1fdd4401c94f9e6d7484620ad56609a8c"
+$checksum_32 = "9c00727c61217b2eadef91d3d5ecdba270082eea8b0f8c44c0505f18146ac130"
 $checksum_icon = "51CC10FCC171AD1F6B9798A8B8C359EA6D37C2A6DF904004155BB65AB8979C45"
 $repository = "AlbertBall/railway-dot-exe"
 
 Write-Host "Fetching version '$env:ChocolateyPackageVersion'"
 
-$download_url_32 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS32.v$env:ChocolateyPackageVersion.zip"
-$download_url_64 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS64.v$env:ChocolateyPackageVersion.zip"
+$download_url_32 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS32-v$env:ChocolateyPackageVersion.zip"
+$download_url_64 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS64-v$env:ChocolateyPackageVersion.zip"
 $toolsDir = "$env:ProgramFiles\Railway_Operation_Simulator"
 
 $packageArgs = @{
