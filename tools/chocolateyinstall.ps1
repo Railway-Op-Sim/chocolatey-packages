@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$checksum_64 = "5e6a4f39ba3aebd73f88fe7d8893e11b749afb5aa76e271c9588871a05bae46f"
-$checksum_32 = "c7d697f3057f3a0f624d06372adb19f8a9cd888853015e1d38771f74dbb8aa1f"
+$checksum_64 = "64e20a7471424cd20bf4baa51ba2280ec25e99ef4e7b7aa968e58dca93f1328a"
+$checksum_32 = "9d08b19fb5c0a1df5a5cae315d955dfe1285dc03303550e32811243d01b6334a"
 $checksum_icon = "51CC10FCC171AD1F6B9798A8B8C359EA6D37C2A6DF904004155BB65AB8979C45"
 $repository = "AlbertBall/railway-dot-exe"
 
@@ -33,15 +33,6 @@ $exe_path_32 = "$binaryDirectory\RailOS32.exe"
 $exe_path_64 = "$binaryDirectory\RailOS64.exe"
 
 Install-ChocolateyZipPackage @packageArgs
-
-if("$env:ChocolateyForceX86") {
-  Move-Item -Path "$target_dir_32\Railway" -Destination $binaryDirectory
-  Remove-Item -LiteralPath $target_dir_32 -Force -Recurse
-}
-else {
-  Move-Item -Path "$target_dir_64\Railway" -Destination $binaryDirectory
-  Remove-Item -LiteralPath $target_dir_64 -Force -Recurse
-}
 
 Install-ChocolateyPath -PathToInstall $binaryDirectory -PathType "User"
 Get-WebFile -Url "https://raw.githubusercontent.com/AlbertBall/railway-dot-exe/master/railway_Icon.ico" -FileName $binaryDirectory\railway.ico
