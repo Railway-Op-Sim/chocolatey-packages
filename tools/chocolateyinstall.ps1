@@ -1,7 +1,7 @@
 ﻿
 $ErrorActionPreference = 'Stop';
-$checksum_64 = "e3f9b579e3ecd146973c45447ce36e02433294bb95398c41f80560d5868f1a29"
-$checksum_32 = "9bff4c49b9945e9ed51195c816e061c380c538d3cb8cf3da92020b735cc662d5"
+$checksum_64 = "6a33182bd2368b32ab4f13498ef013e586c004aecc34c6a55ae2ea2627036375"
+$checksum_32 = "50c26d5f0a39d6586bd075eb4428a2027b2d2127d285f0a86974000ba343d907"
 $checksum_icon = "51CC10FCC171AD1F6B9798A8B8C359EA6D37C2A6DF904004155BB65AB8979C45"
 $repository = "AlbertBall/railway-dot-exe"
 
