@@ -1,4 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
+
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    throw "This script must be run as Administrator"
+}
+
 $installPath = "$env:ProgramFiles\Railway_Operation_Simulator"
 
 $packageArgs = @{
