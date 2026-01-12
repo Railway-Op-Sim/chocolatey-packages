@@ -4,7 +4,12 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     throw "This script must be run as Administrator"
 }
 
-$installPath = "$env:ProgramFiles\Railway_Operation_Simulator"
+$packageParams = Get-PackageParameters
+$installDir = $env:ProgramFiles
+
+if ($packageParams['InstallDir']) {$installDir = $packageParams['InstallDir']}
+
+$installPath = "$InstallDir\Railway_Operation_Simulator"
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName

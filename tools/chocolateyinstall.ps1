@@ -1,15 +1,22 @@
-﻿
-$ErrorActionPreference = 'Stop';
-$checksum_64 = "fc81b0a1dd06af85d924be5cd736bc459fe496faa2d28601535898eff94c4985"
-$checksum_32 = "666779e76e3bfc92914fce290911f05fab24dcaf6d7062fadeb4d71e5d3fc042"
+﻿$ErrorActionPreference = 'Stop';
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    throw "This script must be run as Administrator"
+}
+$checksum_64 = "277186d6be6a2b88703932ece2dab33edeb02a63c2a1730e291f1e3037e81caf"
+$checksum_32 = "504c8c12f5b680fd450fc50b75b6ce3557515ebc481ff931de7f521dcbff2064"
 $checksum_icon = "51CC10FCC171AD1F6B9798A8B8C359EA6D37C2A6DF904004155BB65AB8979C45"
 $repository = "AlbertBall/railway-dot-exe"
+$packageParams = Get-PackageParameters
+
+$installDir = $env:ProgramFiles
+
+if ($packageParams['InstallDir']) {$installDir = $packageParams['InstallDir']}
 
 Write-Host "Fetching version '$env:ChocolateyPackageVersion'"
 
 $download_url_32 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS32-v$env:ChocolateyPackageVersion.zip"
 $download_url_64 = "https://github.com/$repository/releases/download/v$env:ChocolateyPackageVersion/RailOS64-v$env:ChocolateyPackageVersion.zip"
-$toolsDir = "$env:ProgramFiles\Railway_Operation_Simulator"
+$toolsDir = "$installDir\Railway_Operation_Simulator"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName

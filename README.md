@@ -5,15 +5,15 @@ The package is published to the Chocolatey repository, with the following comman
 
 ## Install
 ```pwsh
-choco install railwayopsim
+choco install railwayopsim [--params="'/InstallDir=<INSTALL-DIRECTORY>'"]
 ```
 
 ## Uninstall
 ```pwsh
-choco uninstall railwayopsim
+choco uninstall railwayopsim [--params="'/InstallDir=<INSTALL-DIRECTORY>'"]
 ```
 
 ## Upgrade
 ```pwsh
-choco upgrade railwayopsim
+choco upgrade railwayopsim [--params="'/InstallDir=<INSTALL-DIRECTORY>'"]
 ```
