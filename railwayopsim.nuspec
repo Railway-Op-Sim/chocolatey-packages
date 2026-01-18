@@ -52,7 +52,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <copyright>Copyright (C) 2010 Albert Ball</copyright>
     <summary>Desktop signalling centre simulation</summary>
     <releaseNotes>
-    https://www.railwayoperationsimulator.com/2025/new-program-version-released-v2-23-4/
+    https://www.railwayoperationsimulator.com/2026/new-program-version-released-v2-23-4/
     </releaseNotes>
     <description><![CDATA[Railway Operation Simulator is an open source desktop railway signalling simulation program.
 
